@@ -14,7 +14,6 @@ def D1():
     print(f"Total weight in pounds: {totalWeightInPounds:,.2f} lbs")
     print("-" * 60)
 
-
 def D2():
 
     def GetDataSizeInBits(amountOfData):
@@ -88,3 +87,42 @@ def D3():
     print(f"JPEG : {GetJpegSize(usb_size):,} images")
     print(f"PNG  : {GetPngSize(usb_size):,} images")
     print(f"TIFF : {GetTiffSize(usb_size):,} images")
+
+def D4():
+    
+    def GetAgeInSeconds(user_age):
+        seconds_per_year = 365.25 * 24 * 60 * 60
+        return int(user_age * seconds_per_year)
+    
+    def GetHeartBeatsPerSecond(user_age):
+        heart_rate = float(67.5)
+        return round((heart_rate * GetAgeInSeconds(user_age)), 2)
+    
+    def GetBreathPerMin(user_age):
+        infant = (30+60) // 2
+        one_to_four = (20+30) // 2
+        five_to_fourteen = (15+25) // 2
+        adult = (12+20) // 2
+        
+        minutes_in_year = 365.25 * 24 * 60
+        total_breath = 0
+        
+        for year in range(user_age):
+            if year < 1:
+                bpm = infant
+            elif 1 <= year <= 4:
+                bpm = one_to_four
+            elif 5 <= year <= 14:
+                bpm = five_to_fourteen
+            else:
+                bpm = adult
+            total_breath += int(bpm * minutes_in_year)
+        return total_breath
+
+    user_age = int(input('Enter your age: '))
+    
+    total_heart_rate = GetHeartBeatsPerSecond(user_age)
+    total_breath_rate = GetBreathPerMin(user_age)
+
+    print(f"Estimated heartbeats per sec in your life: {total_heart_rate:,}")
+    print(f"Estimated breaths per min in your life: {total_breath_rate:,}")
