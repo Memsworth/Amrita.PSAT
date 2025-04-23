@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4c32a57e-367f-4594-8822-76b127fcc61f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>IntroToCSUsingPython\Chapter02\Development.py</StartupFile>
+    <StartupFile>IntroToCSUsingPython\Chapter03\Exercises.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,12 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="IntroToCSDeitel\Chapter02\" />
+    <Folder Include="IntroToCSDeitel\Chapter03\" />
     <Folder Include="IntroToCSUsingPython\" />
     <Folder Include="IntroToCSUsingPython\Chapter02\" />
+    <Folder Include="IntroToCSDeitel\" />
+    <Folder Include="IntroToCSUsingPython\Chapter03\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntroToCSDeitel\Chapter02\Exercises.py" />
+    <Compile Include="IntroToCSDeitel\Chapter03\Exercises.py" />
     <Compile Include="IntroToCSUsingPython\Chapter02\Development.py" />
     <Compile Include="IntroToCSUsingPython\Chapter02\Exercises.py" />
+    <Compile Include="IntroToCSUsingPython\Chapter03\Exercises.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="venv\">
