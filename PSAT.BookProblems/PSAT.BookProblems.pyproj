@@ -4,14 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4c32a57e-367f-4594-8822-76b127fcc61f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>IntroToCSUsingPython\Chapter03\Exercises.py</StartupFile>
+    <StartupFile>IntroToCSUsingPython\Chapter03\Development.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PSAT.BookProblems</Name>
     <RootNamespace>PSAT.BookProblems</RootNamespace>
-    <InterpreterId>MSBuild|venv|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,13 +34,14 @@
     <Compile Include="IntroToCSDeitel\Chapter03\Exercises.py" />
     <Compile Include="IntroToCSUsingPython\Chapter02\Development.py" />
     <Compile Include="IntroToCSUsingPython\Chapter02\Exercises.py" />
+    <Compile Include="IntroToCSUsingPython\Chapter03\Development.py" />
     <Compile Include="IntroToCSUsingPython\Chapter03\Exercises.py" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="venv\">
-      <Id>venv</Id>
+    <Interpreter Include="env\">
+      <Id>env</Id>
       <Version>3.13</Version>
-      <Description>venv (Python 3.13 (64-bit))</Description>
+      <Description>env (Python 3.13 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
